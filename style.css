@@ -146,3 +146,67 @@ h1 {
 .btn-del:hover {
     opacity: 1
 }
+
+.designer-copyright {
+    margin-top: auto;
+    padding: 20px;
+    font-size: .8rem;
+    color: #94a3b8;
+    font-weight: 500
+}
+
+.designer-copyright span {
+    color: #3b82f6;
+    font-weight: 700
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px
+}
+
+.btn-clear {
+    background: 0 0;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.search-input {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    outline: none
+}
+
+.note-info {
+    font-size: .6rem;
+    margin-top: 10px;
+    opacity: .5
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.btn-download {
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: .5
+}
+
+.btn-download:hover {
+    opacity: 1
+}
+
+.no-match-msg {
+    grid-column: 1/-1;
+    text-align: center;
+    opacity: .5
+}

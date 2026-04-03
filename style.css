@@ -59,3 +59,90 @@ h1 {
     width: 100%;
     max-width: 1100px
 }
+
+.note-card {
+    background: #fff9c4;
+    padding: 24px;
+    height: 280px;
+    border-radius: 2px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid rgba(0, 0, 0, .05)
+}
+
+.note-card:hover {
+    z-index: 10;
+    cursor: move;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, .15)
+}
+
+.pink {
+    background: #fce4ec
+}
+
+.blue {
+    background: #e3f2fd
+}
+
+.green {
+    background: #e8f5e9
+}
+
+.text-area {
+    flex: 1;
+    background: 0 0;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #455a64
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, .1);
+    padding-top: 15px
+}
+
+.color-dots {
+    display: flex;
+    gap: 5px
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .1)
+}
+
+.dot.yellow {
+    background: #fff9c4
+}
+
+.dot.pink {
+    background: #fce4ec
+}
+
+.dot.blue {
+    background: #e3f2fd
+}
+
+.btn-del {
+    background: 0 0;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 1.1rem;
+    opacity: .5
+}
+
+.btn-del:hover {
+    opacity: 1
+}

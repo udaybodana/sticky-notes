@@ -98,3 +98,33 @@ function addBlank () {
   save()
   refresh()
 }
+
+function refresh () {
+  board.innerHTML = ''
+  const filtered = myNotes.filter(n => n.text.toLowerCase().includes(searchVal))
+
+  if (filtered.length === 0 && searchVal !== '') {
+    board.innerHTML = `<p class="no-match-msg">No match found...</p>`
+  } else {
+    filtered.forEach(n => createNote(n.id, n.text, n.color, n.date))
+  }
+}
+
+clearBtn.onclick = () => {
+  if (confirm('Delete every single note?')) {
+    myNotes = []
+    save()
+    refresh()
+  }
+}
+
+addBtn.onclick = addBlank
+
+document.addEventListener('DOMContentLoaded', () => {
+  createSearch()
+  if (myNotes.length === 0) {
+    addBlank()
+  } else {
+    refresh()
+  }
+})

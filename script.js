@@ -57,3 +57,44 @@ function createNote (id, content, color, date) {
 
   board.appendChild(card)
 }
+
+function downloadNote (id) {
+  const n = myNotes.find(x => x.id === id)
+  const blob = new Blob([n.text], { type: 'text/plain' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `note_${id}.txt`
+  link.click()
+}
+
+function updateText (id, val) {
+  myNotes = myNotes.map(n => (n.id === id ? { ...n, text: val } : n))
+  save()
+}
+
+function changeColor (id, col) {
+  myNotes = myNotes.map(n => (n.id === id ? { ...n, color: col } : n))
+  save()
+  refresh()
+}
+
+function removeNote (id) {
+  if (confirm('Permanently delete this?')) {
+    myNotes = myNotes.filter(n => n.id !== id)
+    save()
+    refresh()
+  }
+}
+
+function addBlank () {
+  const n = {
+    id: Date.now(),
+    text: '',
+    color: 'yellow',
+    date: new Date().toLocaleDateString()
+  }
+  myNotes.push(n)
+  save()
+  refresh()
+}
